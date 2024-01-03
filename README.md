@@ -1,17 +1,6 @@
 <h1 align="center">
  <br> ☕ Video Search App ☕ 
 
-[![REPOSITÓRIO](https://img.shields.io/badge/intrucciones%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=ABC789)](Link)
-[![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
-[![PERFIL](https://img.shields.io/badge/perfiles%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](./ContactoREADME.md)
-[![REPOSITÓRIO](https://img.shields.io/badge/informe%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=8890AC)](Link)
-
-
-[![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
-
-
-</h1>
-
 
 <div align="center">
   <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
@@ -30,6 +19,19 @@
     <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" width="40" height="40"/> 
   </a>
 </div>
+
+
+[![REPOSITÓRIO](https://img.shields.io/badge/intrucciones%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=ABC789)](Link)
+[![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
+[![PERFIL](https://img.shields.io/badge/perfiles%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](./ContactoREADME.md)
+[![REPOSITÓRIO](https://img.shields.io/badge/informe%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=8890AC)](Link)
+[![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
+
+</h1>
+
+
+
+
 
 
 
