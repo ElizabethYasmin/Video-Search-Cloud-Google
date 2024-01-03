@@ -3,11 +3,34 @@
 
 
 [![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
-[![PERFIL](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](https://github.com/ElizabethYasmin)
+[![PERFIL](https://img.shields.io/badge/perfiles%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](./ContactoREADME.md)
 [![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
 
 
 </h1>
+
+<img align="right" height="150" src="https://i.gjcdn.net/public-data/fireside/posts/72/70/4546070/media/mario_caminando-sy2ru9gm.gif" />
+<div align="center">
+
+  <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
+  </a> 
+  <a href="https://www.djangoproject.com" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="django" width="40" height="40"/> 
+  </a> 
+  <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" width="40" height="40"/> 
+  </a> 
+  <a href="https://www.npmjs.com" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" width="40" height="40"/> 
+  </a> 
+  <a href="https://reactjs.org" target="_blank" rel="noreferrer"> 
+    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" width="40" height="40"/> 
+  </a>
+</div>
+
+
+
 
 
 
@@ -41,35 +64,6 @@
     </tr>
   </table>
 </center>
-
-
-
-
-## Menu
-- [ELIZABETH YASMIN HUANCA PARQUI](#Huanca)
-- [BRAYAN GINO FERNANDEZ MAMANI](#Fernandez)
-- [SELENE BARRIOS CORNEJO](#Barrios)
-
-## CONTACTOS
-
-## Huanca
-
-Red | URL
------------- | -------------
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> | `ehuancap@unsa.edu.pe`
-<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" /> | `https://github.com/ElizabethYasmin`
-
-## Fernandez
-
-Red | URL
------------- | -------------
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> | `@unsa.edu.pe`
-
-## Barrios
-
-Red | URL
------------- | -------------
-<img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /> | `@unsa.edu.pe`
 
 
 # Video Search App
@@ -164,6 +158,3 @@ https://github.com/ElizabethYasmin/Video-Search-Cloud-Google/assets/62725994/55a
 https://github.com/ElizabethYasmin/Video-Search-Cloud-Google/assets/62725994/8001a8c2-d09f-441c-b7eb-3b9122ae5fc4
 
 
-## ☕ Creadora
-
-Conoce mas sobre mi [AQUI](https://github.com/ElizabethYasmin) .<br>
