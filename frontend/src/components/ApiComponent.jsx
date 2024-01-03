@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Modal from 'react-modal'; // Importa la librería de modales
+
+// ... (imports y otros códigos)
 
 const ApiComponent = () => {
   const [file, setFile] = useState(null);
@@ -33,6 +36,10 @@ const ApiComponent = () => {
         console.error('Error uploading video:', error);
         // Mostrar un toast de error en caso de fallo
         toast.error('Error al subir el video. Por favor, inténtalo de nuevo.');
+      })
+      .finally(() => {
+        // Limpiar el campo de examinar después de cargar un video
+        setFile(null);
       });
   };
 
@@ -40,7 +47,15 @@ const ApiComponent = () => {
     <div>
       <div>
         <input type="file" onChange={handleFileChange} />
-        <button onClick={handleUpload}>Upload</button>
+        <button
+          onClick={handleUpload}
+          style={{
+            padding: '5px 10px', // Ajusta el padding para que sea más pequeño
+            fontSize: '14px',    // Ajusta el tamaño de la fuente
+          }}
+        >
+          Upload
+        </button>
       </div>
       <ToastContainer />
     </div>

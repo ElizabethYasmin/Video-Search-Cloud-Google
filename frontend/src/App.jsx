@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { FaSpinner } from 'react-icons/fa'; // Importa el ícono de spinner
 import ApiComponent from './components/ApiComponent';
 import FilteredVideoList from './components/FilteredVideoList';
 import './App.css'; // Importa el archivo de estilos CSS
 import './FilteredVideoList.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -34,7 +36,10 @@ const App = () => {
         setRecentSearches(prevSearches => [{ query: formattedSearchQuery, videos: data }, ...prevSearches.slice(0, 4)]);
       })
       .catch(error => console.error('Error fetching filtered videos:', error))
-      .finally(() => setIsLoading(false));
+      .finally(() => {
+        setIsLoading(false);
+        setSearchQuery(''); // Limpiar el input después de completar la búsqueda
+      });
   };
 
   const handleRecentSearchClick = (recentSearch) => {
@@ -49,6 +54,8 @@ const App = () => {
     // Realizar la búsqueda cuando se hace clic en una sugerencia
     setSearchQuery(selectedSuggestion);
     handleSearch();
+    // Limpiar la sugerencia seleccionada después de la búsqueda
+    setSelectedSuggestion('');
   };
 
   return (
@@ -91,7 +98,7 @@ const App = () => {
             ))}
           </datalist>
           <button onClick={handleSearch} disabled={isLoading}>
-            {isLoading ? 'Buscando...' : 'Buscar'}
+            {isLoading ? <FaSpinner className="spinner-icon" /> : 'Buscar'}
           </button>
           {selectedSuggestion && (
             <button onClick={handleSuggestionClick}>
@@ -100,9 +107,16 @@ const App = () => {
           )}
         </div>
 
-        {isLoading && <p>Realizando búsqueda...</p>}
-        {filteredVideos.length > 0 && <FilteredVideoList videos={filteredVideos} />}
-        {filteredVideos.length === 0 && !isLoading && <p>No se encontraron videos.</p>}
+        {/*spinner de carga en lugar del texto */}
+        {isLoading ? (
+          <div className="loading-spinner-container">
+            <FaSpinner className="loading-spinner" />
+          </div>
+        ) : filteredVideos.length > 0 ? (
+          <FilteredVideoList videos={filteredVideos} />
+        ) : (
+          <p>No se encontraron videos.</p>
+        )}
       </div>
     </div>
   );
