@@ -11,18 +11,37 @@
 
 
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/62725994?v=4" width="100px;" alt="Foto Yasmin"/><br>
-        <sub>
-          <b>Elizabeth Huanca</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+<center>
+  <table>
+    <tr>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/62725994?v=4" width="100px;" alt="Foto Yasmin"/><br>
+          <sub>
+            <b>Elizabeth Huanca</b>
+          </sub>
+        </a>
+      </td>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/38021042?v=4" width="100px;" alt="Foto Sele"/><br>
+          <sub>
+            <b>Selene Barrios</b>
+          </sub>
+        </a>
+      </td>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/124095872?v=4" width="100px;" alt="Foto Gino"/><br>
+          <sub>
+            <b>Gino Fernandez</b>
+          </sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</center>
+
 
 
 
