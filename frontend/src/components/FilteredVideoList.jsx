@@ -6,10 +6,10 @@ const FilteredVideoList = ({ videos }) => {
 
   return (
     <div className="filtered-video-list">
-      <h2>Resultados de la búsqueda</h2>
+      <h2 style={{ marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }} variant="h5" gutterBottom >Resultados de la búsqueda</h2>
       <ul className="video-list">
         {sortedVideos.map(video => (
-          <li key={video.name} className="video-item">
+          <li key={`${video.name}-${video.etiqueta}`} className="video-item">
             <div className="video-details">
               <h3>{video.name}</h3>
               <p>Etiqueta: {video.etiqueta}</p>

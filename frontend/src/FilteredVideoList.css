@@ -1,48 +1,45 @@
-/* Modificado para adaptarse al nuevo diseño y ajustar al tamaño de la pantalla */
-
 .video-item {
-    background-color: #121212; /* Fondo oscuro */
-    border: 1px solid #333; /* Borde oscuro */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2vw; /* Se ajusta al tamaño de la pantalla */
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .video-details {
-    padding: 2vw; /* Se ajusta al tamaño de la pantalla */
-  }
-  
-  .video-media {
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .video-media img,
-  .video-media video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px; /* Borde redondeado para las imágenes y videos */
-  }
-  
-  .video-details h3,
-  .video-details p {
-    color: #fff; /* Texto blanco */
-    margin: 0;
-  }
-  
-  /* Añadir sombra suave al hover */
-  .video-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  }
-  
-  /* Transición suave para la imagen en hover */
-  .video-item:hover .video-media img,
-  .video-item:hover .video-media video {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-  }
-  
+  background-color: #121212; /* Fondo oscuro */
+  border: 1px solid #333; /* Borde oscuro */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2vw; /* Se ajusta al tamaño de la pantalla */
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.video-details {
+  padding: 2vw; /* Se ajusta al tamaño de la pantalla */
+}
+
+.video-media {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-media img,
+.video-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Borde redondeado para las imágenes y videos */
+  transition: transform 0.3s ease; /* Transición suave para la imagen en hover */
+}
+
+.video-details h3,
+.video-details p {
+  color: #fff; /* Texto blanco */
+  margin: 0;
+}
+
+/* Añadir sombra suave al hover */
+.video-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Transición suave para la imagen en hover */
+.video-item:hover .video-media img,
+.video-item:hover .video-media video {
+  transform: scale(1.05);
+}

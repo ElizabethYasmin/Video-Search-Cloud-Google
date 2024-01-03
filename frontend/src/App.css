@@ -1,28 +1,50 @@
-/* Modificado para mantener el tamaño del sidebar y el content */
+/* App.css */
+/* App.css */
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  display: flex;
-  min-height: 100vh;
+.search-button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #00c4cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #007e86;
+}
+
+
+.upload-button {
+  padding: 10px 15px;      /* Ajusta el padding */
+  font-size: 16px;         /* Ajusta el tamaño de la fuente */
+  background-color: #00c4cc; /* Color de fondo */
+  color: #fff;             /* Color del texto */
+  border: none;            /* Sin borde */
+  border-radius: 4px;      /* Borde redondeado */
+  cursor: pointer;         /* Cambia el cursor al pasar el ratón */
+}
+
+.upload-button:hover {
+  background-color: #007e86; /* Cambia el color de fondo al pasar el ratón */
 }
 
 .app-container {
   display: flex;
-  flex: 1;
-  width: 100%;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif; /* Cambia la fuente según tus preferencias */
 }
 
 .sidebar {
   width: 250px;
-  min-width: 250px; /* Mínimo ancho del sidebar */
-  background-color: #181818;
+  background-color: #181818; /* Fondo oscuro */
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: #fff;
 }
 
 .sidebar h2 {
+  color: #fff; /* Texto blanco */
   font-size: 1.2em;
   margin-bottom: 15px;
 }
@@ -35,6 +57,7 @@ body {
 .sidebar li {
   cursor: pointer;
   margin-bottom: 10px;
+  color: #fff; /* Texto blanco */
 }
 
 .sidebar li span {
@@ -55,13 +78,14 @@ body {
 
 .content {
   flex-grow: 1;
-  min-width: 600px; /* Mínimo ancho del content */
   padding: 20px;
-  background-color: #121212;
-  color: #fff;
+  background-color: #121212; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
 }
 
 .search-container {
+  padding-top: 20px;
+  margin-left: 25px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -70,14 +94,14 @@ body {
 input {
   flex-grow: 1;
   padding: 10px;
-  border: 1px solid #333;
+  border: 1px solid #333; /* Borde más oscuro */
   border-radius: 4px;
-  background-color: #333;
-  color: #fff;
+  background-color: #333; /* Fondo más oscuro */
+  color: #fff; /* Texto blanco */
 }
 
 button {
-  background-color: #ff0000;
+  background-color: #ff0000; /* Rojo de YouTube */
   color: white;
   padding: 10px 15px;
   border: none;
@@ -86,8 +110,12 @@ button {
 }
 
 button:disabled {
-  background-color: #777;
+  background-color: #777; /* Gris más oscuro para el estado deshabilitado */
   cursor: not-allowed;
 }
 
-/* Resto de los estilos ... */
+/* Estilos para el nuevo botón Upload */
+.upload-btn {
+  padding: 5px 10px; /* Ajusta el padding para que sea más pequeño */
+  font-size: 14px;    /* Ajusta el tamaño de la fuente */
+}

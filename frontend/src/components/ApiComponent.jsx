@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
+import { Button, Container, Typography } from '@mui/material';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Modal from 'react-modal'; // Importa la librería de modales
-
-// ... (imports y otros códigos)
 
 const ApiComponent = () => {
   const [file, setFile] = useState(null);
@@ -26,40 +25,54 @@ const ApiComponent = () => {
       method: 'POST',
       body: formData,
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log('Video uploaded:', data);
         // Mostrar un toast de éxito
         toast.success('¡Video subido correctamente!');
       })
-      .catch(error => {
+      .catch((error) => {
         console.error('Error uploading video:', error);
         // Mostrar un toast de error en caso de fallo
         toast.error('Error al subir el video. Por favor, inténtalo de nuevo.');
-      })
-      .finally(() => {
-        // Limpiar el campo de examinar después de cargar un video
-        setFile(null);
       });
   };
 
-  return (
-    <div>
-      <div>
-        <input type="file" onChange={handleFileChange} />
-        <button
-          onClick={handleUpload}
-          style={{
-            padding: '5px 10px', // Ajusta el padding para que sea más pequeño
-            fontSize: '14px',    // Ajusta el tamaño de la fuente
-          }}
+return (
+  <Container>
+    <div style={{ display: 'flex', marginTop: '10px' }}>
+      <input
+        type="file"
+        onChange={handleFileChange}
+        style={{ display: 'none' }}
+        id="file-upload"
+      />
+      <label htmlFor="file-upload">
+        <Button
+          variant="contained"
+          component="span"
+          startIcon={<CloudUploadIcon />}
         >
-          Upload
-        </button>
-      </div>
-      <ToastContainer />
+          Seleccionar Archivo
+        </Button>
+      </label>
+      {file && (
+        <Typography variant="body1" >
+          Archivo Seleccionado: {file.name}
+        </Typography>
+      )}
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={handleUpload}
+        style={{ marginLeft: '10px' }}
+      >
+        Subir
+      </Button>
     </div>
-  );
+    <ToastContainer />
+  </Container>
+);
 };
 
 export default ApiComponent;

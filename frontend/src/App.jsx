@@ -1,22 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import { FaSpinner } from 'react-icons/fa'; // Importa el ícono de spinner
+import { FaSpinner } from 'react-icons/fa';
 import ApiComponent from './components/ApiComponent';
 import FilteredVideoList from './components/FilteredVideoList';
-import './App.css'; // Importa el archivo de estilos CSS
+import {
+  AppBar,
+  Box,
+  Button,
+  CircularProgress,
+  Container,
+  Grid,
+  TextField,
+  Toolbar,
+  Typography,
+} from '@mui/material';
+import './App.css';
 import './FilteredVideoList.css';
 import 'react-toastify/dist/ReactToastify.css';
+import SearchIcon from '@mui/icons-material/Search';
 
 const App = () => {
+  const [contentType, setContentType] = useState('videos');
   const [searchQuery, setSearchQuery] = useState('');
   const [filteredVideos, setFilteredVideos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [recentSearches, setRecentSearches] = useState([]);
   const [selectedSuggestion, setSelectedSuggestion] = useState('');
 
+  const handleContentTypeChange = (newType) => {
+    setContentType(newType);
+  };
+  
   useEffect(() => {
-    // Realizar una búsqueda al cargar la página
     handleSearch();
-  }, []); // Dependencia vacía para ejecutar una vez al montar el componente
+  }, []);
 
   const handleSearch = () => {
     if (!searchQuery.trim()) {
@@ -25,100 +41,149 @@ const App = () => {
 
     setIsLoading(true);
 
-    // Convertir la primera letra a mayúscula y el resto a minúsculas
-    const formattedSearchQuery = searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1).toLowerCase();
+    const formattedSearchQuery =
+      searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1).toLowerCase();
 
     fetch(`http://127.0.0.1:8000/videos/filter/${formattedSearchQuery}`)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setFilteredVideos(data);
-        // Almacena la búsqueda reciente
-        setRecentSearches(prevSearches => [{ query: formattedSearchQuery, videos: data }, ...prevSearches.slice(0, 4)]);
+        setRecentSearches((prevSearches) => [
+          { query: formattedSearchQuery, videos: data },
+          ...prevSearches.slice(0, 4),
+        ]);
       })
-      .catch(error => console.error('Error fetching filtered videos:', error))
+      .catch((error) => console.error('Error fetching filtered videos:', error))
       .finally(() => {
         setIsLoading(false);
-        setSearchQuery(''); // Limpiar el input después de completar la búsqueda
+        setSearchQuery('');
       });
   };
 
   const handleRecentSearchClick = (recentSearch) => {
-    // Actualizar la búsqueda reciente en función del historial
     setSearchQuery(recentSearch.query);
     setFilteredVideos(recentSearch.videos);
-    // Establecer la sugerencia seleccionada
     setSelectedSuggestion(recentSearch.query);
   };
 
   const handleSuggestionClick = () => {
-    // Realizar la búsqueda cuando se hace clic en una sugerencia
     setSearchQuery(selectedSuggestion);
     handleSearch();
-    // Limpiar la sugerencia seleccionada después de la búsqueda
     setSelectedSuggestion('');
   };
 
   return (
-    <div className="app-container">
-      <div className="sidebar">
-        <h2>Recientes</h2>
-        <ul>
-          {recentSearches.map((recentSearch, index) => (
-            <li key={index} onClick={() => handleRecentSearchClick(recentSearch)}>
-              {recentSearch.query}
-              {recentSearch.videos.length > 0 && (
-                <div className="thumbnail-container">
-                  {recentSearch.videos.map((video, vidIndex) => (
-                    <img key={vidIndex} src={`https://${video.url_image}`} alt={`Thumbnail ${video.name}`} />
-                  ))}
-                </div>
+
+    
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="sticky">
+
+        <Toolbar>
+          {/* Agrega tu logo aquí */}
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            VIDEO SEARCH CLOUD
+          </Typography>
+        </Toolbar>
+
+
+      </AppBar>
+
+
+
+      <Container sx={{ marginTop: 3 }}>
+        <Grid container spacing={10}>
+          <Grid item xs={12} md={4}>
+            <Box>
+              <Typography variant="h5">Recientes</Typography>
+              <ul>
+                {recentSearches.map((recentSearch, index) => (
+                  <li
+                    key={index}
+                    onClick={() => handleRecentSearchClick(recentSearch)}
+                  >
+                    {recentSearch.query}
+                    {recentSearch.videos.length > 0 && (
+                      <div className="thumbnail-container">
+                        {recentSearch.videos.map((video, vidIndex) => (
+                          <img
+                            key={vidIndex}
+                            src={`https://${video.url_image}`}
+                            alt={`Thumbnail ${video.name}`}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </Box>
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <Container >
+              <ApiComponent />
+            
+
+
+
+              <Box className="search-container">
+                <TextField
+                  value={searchQuery}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value);
+                    setSelectedSuggestion('');
+                  }}
+                  label="Buscar videos por etiqueta..."
+                  variant="outlined"
+                  fullWidth
+                  size="small"
+                  
+
+                  InputProps={{
+                    endAdornment: (
+                      <Button
+                        onClick={handleSearch}
+                        disabled={isLoading}
+                        variant="contained"
+                        className="search-button"
+                      >
+                        {isLoading ? (
+                          <CircularProgress size={20} />
+                        ) : (
+                          <SearchIcon />
+                        )}
+                      </Button>
+                    ),
+                  }}
+                />
+
+
+
+                {selectedSuggestion && (
+                  <Button onClick={handleSuggestionClick} variant="outlined" style={{ marginLeft: '10px' }}>
+                    Sugerencia: {selectedSuggestion}
+                  </Button>
+                )}
+              </Box>
+
+              {isLoading ? (
+                <Box className="loading-spinner-container" style={{ marginLeft: 'auto', marginRight: 'auto', textAlign: 'center' }}>
+                  <CircularProgress className="loading-spinner" />
+                </Box>
+              ) : filteredVideos.length > 0 ? (
+                <FilteredVideoList videos={filteredVideos} />
+              ) : (
+                <Typography style={{ marginLeft: '25px' }} variant="h5" gutterBottom>No se encontraron videos.</Typography>
               )}
-            </li>
-          ))}
-        </ul>
-      </div>
+            </Container>
 
-      <div className="content">
-        <ApiComponent />
-        <div className="search-container">
-          <input
-            type="text"
-            placeholder="Buscar videos por etiqueta..."
-            value={searchQuery}
-            onChange={(e) => {
-              setSearchQuery(e.target.value);
-              // Limpiar la sugerencia seleccionada al escribir
-              setSelectedSuggestion('');
-            }}
-            list="suggestions"
-          />
-          <datalist id="suggestions">
-            {recentSearches.map((recentSearch, index) => (
-              <option key={index} value={recentSearch.query} />
-            ))}
-          </datalist>
-          <button onClick={handleSearch} disabled={isLoading}>
-            {isLoading ? <FaSpinner className="spinner-icon" /> : 'Buscar'}
-          </button>
-          {selectedSuggestion && (
-            <button onClick={handleSuggestionClick}>
-              Buscar sugerencia: {selectedSuggestion}
-            </button>
-          )}
-        </div>
 
-        {/*spinner de carga en lugar del texto */}
-        {isLoading ? (
-          <div className="loading-spinner-container">
-            <FaSpinner className="loading-spinner" />
-          </div>
-        ) : filteredVideos.length > 0 ? (
-          <FilteredVideoList videos={filteredVideos} />
-        ) : (
-          <p>No se encontraron videos.</p>
-        )}
-      </div>
-    </div>
+
+
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
