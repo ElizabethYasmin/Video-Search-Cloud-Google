@@ -78,9 +78,9 @@ class FilterVideoAPIview(APIView):
         
         data = []
         for row in query_job:
-            data.append({'name': row[1], 
+            data.append({   'name': row[1], 
                             'etiqueta':row[0],
-                            'url_video': 'storage.googleapis.com/videosearch/'+row[1]+'.mp4',
-                            'url_gif': 'storage.googleapis.com/video-gifs/'+row[1]+'.gif',
-                            'url_image':'storage.googleapis.com/video-thumbs/'+row[1]+'.png'})
+                            'url_video': 'storage.googleapis.com/videosearchs/'+row[1]+'.mp4',
+                            'url_gif': 'storage.googleapis.com/video01-gift/'+row[1],
+                            'url_image':'storage.googleapis.com/video01-thumbss/'+row[1]})
         return Response(data, status=status.HTTP_200_OK)

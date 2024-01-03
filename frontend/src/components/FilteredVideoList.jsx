@@ -1,36 +1,32 @@
-import React, { useState, useEffect } from 'react';
+// FilteredVideoList.jsx
 
-const FilteredVideoList = () => {
-  const [query, setQuery] = useState('');  // Estado para almacenar el término de búsqueda
-  const [filteredVideos, setFilteredVideos] = useState([]);
+import React from 'react';
 
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const handleSearch = () => {
-    // Realizar la solicitud para obtener la lista de videos filtrada desde tu backend
-    fetch(`http://127.0.0.1:8000/videos/filter/${encodeURIComponent(query)}`)
-      .then(response => response.json())
-      .then(data => setFilteredVideos(data))
-      .catch(error => console.error('Error fetching filtered videos:', error));
-  };
-
-  useEffect(() => {
-    // Puedes realizar la solicitud al cargar el componente o cuando sea necesario
-    handleSearch();
-  }, []);  // Dependencia vacía para que se ejecute solo una vez al montar el componente
-
+const FilteredVideoList = ({ videos }) => {
   return (
     <div>
-      <h2>Lista de Videos Filtrada</h2>
-      <div>
-        <input type="text" value={query} onChange={handleInputChange} />
-        <button onClick={handleSearch}>Buscar</button>
-      </div>
+      <h2>Resultados de la búsqueda</h2>
       <ul>
-        {filteredVideos.map(video => (
-          <li key={video.id}>{video.name}</li>
+        {videos.map(video => (
+          <li key={video.name}>
+            <h3>{video.name}</h3>
+            <p>Etiqueta: {video.etiqueta}</p>
+            <p>Nombre: {video.name}</p>
+
+
+            <video width="320" height="240" controls>
+              {/* Corregimos la URL del video */}
+              <source src={`https://${video.url_video}`} type="video/mp4" />
+              Tu navegador no soporta el tag de video.
+            </video>
+
+            <img src={`https://${video.url_gif}`} alt="GIF" />
+
+            
+            <img  src={`https://${video.url_image}`} alt="Thumbnail" />
+
+            
+          </li>
         ))}
       </ul>
     </div>
