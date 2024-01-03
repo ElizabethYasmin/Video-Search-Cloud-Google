@@ -1,38 +1,24 @@
-// Archivo src/components/VideoList.jsx
+const handleSearch = () => {
+  if (!searchQuery.trim()) {
+    return;
+  }
 
-import React, { useState, useEffect } from 'react';
+  setIsLoading(true);
 
-const VideoList = () => {
-  const [videos, setVideos] = useState([]);
+  const formattedSearchQuery = searchQuery.charAt(0).toUpperCase() + searchQuery.slice(1).toLowerCase();
 
-  useEffect(() => {
-    // Realizar la solicitud para obtener la lista de videos desde tu backend
-    const apiUrl = 'http://127.0.0.1:8000/videos/list';
-    console.log('Fetching data from:', apiUrl);  // Imprime la URL en la consola
-    fetch(apiUrl, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        // Puedes incluir otros encabezados según sea necesario
-      },
+  fetch('http://127.0.0.1:8000/videos/filter', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ query: formattedSearchQuery }),
+  })
+    .then(response => response.json())
+    .then(data => {
+      setFilteredVideos(data);
+      setRecentSearches(prevSearches => [{ query: formattedSearchQuery, videos: data }, ...prevSearches.slice(0, 4)]);
     })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);  // Imprimir la respuesta en la consola
-        // Verifica la estructura exacta de la respuesta y ajusta esta línea en consecuencia
-        setVideos([data]);
-      })
-      .catch(error => console.error('Error fetching videos:', error));
-  }, []);  // El segundo argumento [] asegura que useEffect se ejecute solo una vez al montar el componente
-  
-  return (
-    <div>
-      <h2>Lista de Videos</h2>
-      <ul>
-        <li key={videos.id}>{videos.name}</li>
-      </ul>
-    </div>
-  );
+    .catch(error => console.error('Error fetching filtered videos:', error))
+    .finally(() => setIsLoading(false));
 };
-
-export default VideoList;
