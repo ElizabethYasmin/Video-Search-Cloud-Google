@@ -1,11 +1,14 @@
 <h1 align="center">
-☕ <br>Video Search App ☕ 
-</h1>
+ <br> ☕ Video Search App ☕ 
+
 
 
 [![PERFIL](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](https://github.com/ElizabethYasmin)
 [![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
 [![Card](https://img.shields.io/badge/GOOGLE%20CLOUD%20-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FFB800)](https://console.cloud.google.com/)
+
+</h1>
+
 
 
 <table>
@@ -18,7 +21,6 @@
         </sub>
       </a>
     </td>
-    
   </tr>
 </table>
 
@@ -61,8 +63,7 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 - [Requisitos del Sistema](#requisitos-del-sistema)
 - [Configuración del Proyecto](#configuración-del-proyecto)
 - [Instrucciones de Ejecución](#instrucciones-de-ejecución)
-- [Contribución](#contribución)
-- [Licencia](#licencia)
+
 
 ## Características
 
@@ -81,13 +82,66 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 
 ## Configuración del Proyecto
 
+```bash
+git clone https://github.com/ElizabethYasmin/Video-Search-Cloud-Google.git
+
+```
+
+## Instrucciones de Ejecución
+
 ### Backend (Django)
 
-1. Clona este repositorio.
+1. Crear un entorno virtual:
 
 ```bash
-git clone 
-cd backend
+python -m venv nombre_de_tu_entorno_virtual (En nuestro caso colocamos el nombre de myenv)
+
+```
+
+2. Activar el entorno virtual:
+
+```bash
+source nombre_de_tu_entorno_virtual/bin/activate
+
+```
+
+2. Instala las dependencias:
+
+```bash
+pip install -r requirements.txt
+
+```
+
+2. Verifica la instalación:
+
+```bash
+pip list
+
+```
+2. Corremos el backend
+
+```bash
+ python manage.py runserver
+
+```
+
+https://github.com/ElizabethYasmin/Video-Search-Cloud-Google/assets/62725994/55a895ef-2c02-4e66-87e4-78792f429289
+
+
+### Frontend (Vite-React-Javascript (jsx))
+
+```bash
+ npm install
+
+```
+
+```bash
+ npm run dev
+
+```
+
+
+https://github.com/ElizabethYasmin/Video-Search-Cloud-Google/assets/62725994/8001a8c2-d09f-441c-b7eb-3b9122ae5fc4
 
 
 ## ☕ Creadora
