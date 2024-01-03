@@ -2,19 +2,12 @@
  <br> ☕ Video Search App ☕ 
 
 
-
+[![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
 [![PERFIL](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](https://github.com/ElizabethYasmin)
 [![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
-[![Card](https://img.shields.io/badge/GOOGLE%20CLOUD%20-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FFB800)](./OtroREADME.md)
 
-
-[![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
 
 </h1>
-
-
-
-[Ir al README de Video Search App](./OtroREADME.md)
 
 
 
@@ -80,12 +73,13 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 
 ## Requisitos del Sistema
 
-- Python 3.x
-- Django 3.x
-- Node.js
-- npm (Node Package Manager)
-- React
-- Vite
+- Python 3.x <i class="fab fa-python"></i>
+- Django 3.x <i class="fab fa-django"></i>
+- Node.js <i class="fab fa-node"></i>
+- npm (Node Package Manager) <i class="fab fa-npm"></i>
+- React <i class="fab fa-react"></i>
+- Vite <i class="fas fa-cogs"></i>
+
 
 ## Configuración del Proyecto
 

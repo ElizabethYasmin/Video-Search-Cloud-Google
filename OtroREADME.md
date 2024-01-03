@@ -3,8 +3,8 @@
 
 
 
-[![PERFIL](https://img.shields.io/badge/perfil%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](https://github.com/ElizabethYasmin)
-[![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
-[![Card](https://img.shields.io/badge/GOOGLE%20CLOUD%20-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FFB800)](https://console.cloud.google.com/)
+[![VOLVER](https://img.shields.io/badge/volver%20-%23323330.svg?&style=for-the-badge&logo=VOLVER&logoColor=black&color=FF0080)](./README.md)
+[![DOCUMENTACION DE GOOGLE CLOUD](https://img.shields.io/badge/DOCUMENTACION%20DE%20GOOGLE%20CLOUD%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=8000FF)](https://cloud.google.com/docs?hl=es)
+
 
 </h1>
