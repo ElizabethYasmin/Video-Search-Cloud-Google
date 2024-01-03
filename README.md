@@ -1,53 +1,71 @@
 <h1 align="center">
-  ☕ Video Search App ☕
+ <br> ☕ Video Search App ☕ 
+
+[![REPOSITÓRIO](https://img.shields.io/badge/intrucciones%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=ABC789)](Link)
+[![GOOGLE CLOUD GCP](https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900)](./OtroREADME.md)
+[![PERFIL](https://img.shields.io/badge/perfiles%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080)](./ContactoREADME.md)
+[![REPOSITÓRIO](https://img.shields.io/badge/informe%20-%23323330.svg?&style=for-the-badge&logo=reposit%C3%B3rio&logoColor=black&color=8890AC)](Link)
+
+
+[![REPOSITÓRIO](https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF)](https://github.com/ElizabethYasmin/EDA)
+
+
 </h1>
 
-<div align="center">
-  <a href="./OtroREADME.md">
-    <img src="https://img.shields.io/badge/GOOGLE%20CLOUD%20GCP-%23323330.svg?&style=for-the-badge&logo=cards%20estrelas&logoColor=black&color=FAA900" alt="Google Cloud GCP" />
-  </a>
-  <a href="./ContactoREADME.md">
-    <img src="https://img.shields.io/badge/perfiles%20-%23323330.svg?&style=for-the-badge&logo=perfil&logoColor=black&color=FF0080" alt="Perfiles" />
-  </a>
-  <a href="https://github.com/ElizabethYasmin/EDA">
-    <img src="https://img.shields.io/badge/repositório%20-%23323330.svg?&style=for-the-badge&logo=repositório&logoColor=black&color=8000FF" alt="Repositório" />
-  </a>
-</div>
 
-<h2 align="center">Desarrolladores</h2>
-<p align="center">
-  <a href="#">
-    <img src="https://avatars.githubusercontent.com/u/62725994?v=4" width="100px;" alt="Foto Yasmin"/><br>
-    <sub><b>Elizabeth Huanca</b></sub>
-  </a>
-  <a href="#">
-    <img src="https://avatars.githubusercontent.com/u/38021042?v=4" width="100px;" alt="Foto Sele"/><br>
-    <sub><b>Selene Barrios</b></sub>
-  </a>
-  <a href="#">
-    <img src="https://avatars.githubusercontent.com/u/124095872?v=4" width="100px;" alt="Foto Gino"/><br>
-    <sub><b>Gino Fernandez</b></sub>
-  </a>
-</p>
-
-<h2 align="center">Tecnologías Utilizadas</h2>
 <div align="center">
   <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
   </a> 
   <a href="https://www.djangoproject.com" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="Django" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/djangoproject/djangoproject-icon.svg" alt="django" width="40" height="40"/> 
   </a> 
   <a href="https://nodejs.org" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="nodejs" width="40" height="40"/> 
   </a> 
   <a href="https://www.npmjs.com" target="_blank" rel="noreferrer"> 
     <img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" width="40" height="40"/> 
   </a> 
   <a href="https://reactjs.org" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" width="40" height="40"/> 
+    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="react" width="40" height="40"/> 
   </a>
 </div>
+
+
+
+
+
+<center>
+  <table>
+    <tr>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/62725994?v=4" width="100px;" alt="Foto Yasmin"/><br>
+          <sub>
+            <b>Elizabeth Huanca</b>
+          </sub>
+        </a>
+      </td>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/38021042?v=4" width="100px;" alt="Foto Sele"/><br>
+          <sub>
+            <b>Selene Barrios</b>
+          </sub>
+        </a>
+      </td>
+      <td>
+        <a href="#">
+          <img src="https://avatars.githubusercontent.com/u/124095872?v=4" width="100px;" alt="Foto Gino"/><br>
+          <sub>
+            <b>Gino Fernandez</b>
+          </sub>
+        </a>
+      </td>
+    </tr>
+  </table>
+</center>
+
 
 # Video Search App
 
@@ -59,6 +77,7 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 - [Requisitos del Sistema](#requisitos-del-sistema)
 - [Configuración del Proyecto](#configuración-del-proyecto)
 - [Instrucciones de Ejecución](#instrucciones-de-ejecución)
+
 
 ## Características
 
@@ -74,6 +93,7 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
 
 ## Configuración del Proyecto
 
