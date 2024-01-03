@@ -31,14 +31,9 @@ def list_blobs_with_prefix(bucket_name, prefix, delimiter=None):
     # Note: Client.list_blobs requires at least package version 1.17.0.
     blobs = storage_client.list_blobs(bucket_name, prefix=prefix, delimiter=delimiter)
 
-    print("Blobs:")
-    for blob in blobs:
-        print(blob.name)
+    files_list = [blob.name for blob in blobs]
 
-    if delimiter:
-        print("Prefixes:")
-        for prefix in blobs.prefixes:
-            print(prefix)
+    return files_list
 
 
 class UploadAPIView(generics.CreateAPIView):
@@ -59,8 +54,11 @@ class ListVideosAPIView(generics.ListAPIView):
     serializer_class = UploadSerializer
 
     def get(self, request, *args, **kwargs):
-        list_blobs_with_prefix('videosearch','videos')
-        return Response({"list":"data"}, status=status.HTTP_200_OK)
+        # Llamar a la función para listar los archivos con prefijo 'videos'
+        files_list = list_blobs_with_prefix('videosearchs', '')
+
+        # Devolver la lista de nombres de archivos en el JSON de respuesta
+        return Response({"files": files_list}, status=status.HTTP_200_OK)
     
 ##Duda aqui!!
 
