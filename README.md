@@ -73,12 +73,12 @@ La Video Search App es una aplicación que permite a los usuarios buscar, ver y 
 
 ## Requisitos del Sistema
 
-- Python 3.x <i class="fab fa-python"></i>
-- Django 3.x <i class="fab fa-django"></i>
-- Node.js <i class="fab fa-node"></i>
-- npm (Node Package Manager) <i class="fab fa-npm"></i>
-- React <i class="fab fa-react"></i>
-- Vite <i class="fas fa-cogs"></i>
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 
 ## Configuración del Proyecto
