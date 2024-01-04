@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { FaSpinner } from 'react-icons/fa';
+import * as THREE from 'three';
 import ApiComponent from './components/ApiComponent';
 import FilteredVideoList from './components/FilteredVideoList';
+import './FilteredVideoList.css';
+import 'react-toastify/dist/ReactToastify.css';
+import SearchIcon from '@mui/icons-material/Search'
+import ThreeScene from './components/ThreeScene';;
+
+//import './App.css';
+
 import {
   AppBar,
   Box,
@@ -9,14 +17,23 @@ import {
   CircularProgress,
   Container,
   Grid,
+  List,
+  ListItem,
+  Paper,
   TextField,
   Toolbar,
   Typography,
 } from '@mui/material';
-import './App.css';
-import './FilteredVideoList.css';
-import 'react-toastify/dist/ReactToastify.css';
-import SearchIcon from '@mui/icons-material/Search';
+
+
+
+const AppLogo = () => (
+  <img
+    src="./Logogif.gif"  // Reemplaza esto con la ruta de tu imagen PNG
+    //alt="Logo de Video Search Cloud"
+    style={{ height: '80px', marginRight: '10px' }}  // Ajusta el estilo según tus necesidades
+  />
+);
 
 const App = () => {
   const [contentType, setContentType] = useState('videos');
@@ -75,25 +92,32 @@ const App = () => {
   return (
 
     
-    <Box sx={{ flexGrow: 1 }}>
+    <div >
+      
+
+      
       <AppBar position="sticky">
 
-        <Toolbar>
-          {/* Agrega tu logo aquí */}
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            VIDEO SEARCH CLOUD
-          </Typography>
-        </Toolbar>
+      <Toolbar sx={{ backgroundColor: '#123b43' }}>
+        <AppLogo />
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          VIDEO SEARCH CLOUD
+        </Typography>
+      </Toolbar>
 
 
       </AppBar>
 
 
 
-      <Container sx={{ marginTop: 3 }}>
+      <Container sx={{ marginTop: 2, marginLeft: 0 }}>
+        
         <Grid container spacing={10}>
+
+
+
           <Grid item xs={12} md={4}>
-            <Box>
+          <Paper elevation={20} sx={{ padding: 2, marginRight: -10, marginLeft: '0px' }}>
               <Typography variant="h5">Recientes</Typography>
               <ul>
                 {recentSearches.map((recentSearch, index) => (
@@ -116,11 +140,21 @@ const App = () => {
                   </li>
                 ))}
               </ul>
-            </Box>
+              </Paper>
           </Grid>
 
+
+        
+            
+ 
+
+          
+
           <Grid item xs={12} md={8}>
+          
             <Container >
+            
+            
               <ApiComponent />
             
 
@@ -173,17 +207,28 @@ const App = () => {
               ) : filteredVideos.length > 0 ? (
                 <FilteredVideoList videos={filteredVideos} />
               ) : (
-                <Typography style={{ marginLeft: '25px' }} variant="h5" gutterBottom>No se encontraron videos.</Typography>
+                <Typography style={{ marginLeft: '25px' }} variant="h5" >No se encontraron videos.</Typography>
               )}
+
+<ThreeScene/>
             </Container>
 
 
 
 
           </Grid>
+
+
         </Grid>
+
+
+        
       </Container>
-    </Box>
+
+      
+      
+    </div>
+    
   );
 };
 

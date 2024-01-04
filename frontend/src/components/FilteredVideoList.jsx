@@ -1,4 +1,5 @@
 import React from 'react';
+import '../FilteredVideoList.css';
 
 const FilteredVideoList = ({ videos }) => {
   // Ordenar los videos por nombre en orden ascendente
